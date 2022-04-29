@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de preguntas</title>
+
+    <link
+      rel="icono"
+      href="https://icones.pro/wp-content/uploads/2021/05/icone-point-d-interrogation-pregunta-violet.png"
+    />
+
+    <!-- Conexion con la hoja de estilos -->
+    <link rel="stylesheet" href="estilos.css" />
+
+    <!-- Conexion con font-awesome libreria para usar iconos-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Boton para iniciar el cuestionario -->
+    <div class="botonComenzar"><button>Comenzar</button></div>
+
+    <!-- Dvision que muestra las reglas para jugar -->
+    <div class="reglasDelJuego">
+      <div class="tituloReglas">
+        <span>Las reglas del cuestionario son:</span>
+      </div>
+
+      <div class="listaDeReglas">
+        <div class="regla">
+          1. Tienes <span>15 segundos</span> por cada pregunta.
+        </div>
+        <div class="regla">
+          2. Una vez seleccionas la respuesta, no la puedes desmarcar
+        </div>
+        <div class="regla">
+          3. La puntuación se basara en tus respuestas correctas
+        </div>
+        <div class="regla">4. Mucha suerte :D</div>
+      </div>
+      <div class="botones">
+        <button class="salir">Salir</button>
+        <button class="reiniciar">Continuar</button>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="count-down">
+        <div class="timer day">
+          <div class="temporizador sec">
+            <div class="count">
+              <div class="numero">
+                <div class="segundosTemporizador">15</div>
+              </div>
+              <div class="text">Seconds</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Division con la caja de preguntas -->
+    <div class="preguntas">
+      <header>
+        <div class="titulo">Juego de preguntas</div>
+        <div class="temporizador">
+          <div class="tiempoRestante"><div class="categoria"></div></div>
+      
+        </div>
+       
+      </header>
+      <section>
+        <!-- Division con el enunciado de la pregunta -->
+        <div class="enunciadoPregunta"></div>
+        <!-- Division con las respuestas de la pregunta -->
+        <div class="opcionesPregunta"></div>
+      </section>
+
+      <!-- Division con los botones de la parte inferior -->
+      <footer>
+        <!-- Contador con la puntuacion total del jugador -->
+        <div class="puntuacion"></div>
+
+        <!-- Boton para seleccionar la siguiente pregunta -->
+        <button class="botonSiguiente">Siguiente</button>
+      </footer>
+    </div>
+
+    <!-- Apartado que muestra la puntuacion final -->
+    <div class="puntuacionFinal">
+      <div class="icono">
+        <i class="fas fa-crown"></i>
+      </div>
+      <div class="textoFinalizado">Terminaste el cuestionario</div>
+      <!-- Texto con el puntaje final -->
+      <div class="textoPuntaje"></div>
+      <div class="botones">
+        <button class="reiniciar">Volver a jugar</button>
+        <button class="salir">Salir</button>
+      </div>
+    </div>
+
+    <!-- Conexion con la base de datos con preguntas -->
+    <script src="base-de.preguntas.js"></script>
+
+    <!-- Conexion con el javaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
